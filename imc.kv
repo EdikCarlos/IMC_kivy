@@ -1,0 +1,38 @@
+<Container>:
+    orientation: 'vertical'
+    padding: 20
+    Label:
+        text: 'Insira seu peso e tamanho'
+        font_size: 20
+        text_size: self.size
+    BoxLayout:
+        Label:
+            text: 'Altura:'
+    BoxLayout:
+        spacing: 10
+        TextInput:
+            id: altura
+            multiline: False
+            input_filter: 'float'
+    BoxLayout:
+        Label:
+            text: 'Peso:'
+    BoxLayout:
+        spacing: 10
+        TextInput:
+            id: peso
+            multiline: False
+            input_filter: 'int'
+    BoxLayout:
+        Label:
+            text: 'Resultado ->'
+            font_size: 20
+            size_hint_x: None
+            width: self.texture_size[0]
+            halign: 'left'
+        Label:
+            id: resultado
+            font_size: 20
+    Button:
+        text: 'CALCULAR'
+        on_release: root.calc()
